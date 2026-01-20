@@ -22,8 +22,10 @@ public class recursion10 {
     public static int seq10(int intPos){
         if(intPos == 1){
             return 1;
+        }else if(intPos%2 == 0){
+            return seq10(intPos -1) * -1;
         }else{
-            return seq10(intPos - 1) + intPos * ((seq10(intPos -1))/(seq10(intPos -1)*-1));
+            return seq10(intPos - 2) + 1;
         }
     }
 }
